@@ -1,0 +1,23 @@
+#include<stdio.h>
+int main()
+{
+    int n;
+    printf("enter the value of n");
+    scanf("%d",&n);
+    calculate (n);
+    return 0;
+}
+void calculate(int n)
+{
+    int rem,sum=0,x=n;
+    while(n>0)
+    {
+        rem=n%10;
+        sum=sum+rem*rem*rem;
+        n=n/10;
+    }
+    if(sum==x)
+    printf("Armstrong Number");
+    else
+    printf("Not a Armstrong Number");
+}
